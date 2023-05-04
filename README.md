@@ -13,6 +13,7 @@
       3. 설정
       4. 실행
       5. 공통컴포넌트 데이터베이스/사용자 생성
+   2. 톰캣
 
 
 ## 개발환경
@@ -164,3 +165,56 @@ C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\god2023\god.test-com-all\script\
 C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\god2023\god.test-com-all\script\dml\maria\com_DML_maria.sql
 ```
 
+### 톰캣
+
+```
+C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\apache-tomcat-8.5.73-jenkins
+```
+
+god.test-com 톰캣 추가
+
+캐시의 최대 크기를 증가
+
+```
+C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\god2023\Servers\god.test-com-config\context.xml
+```
+
+```
+    <!-- 캐시의 최대 크기를 증가시키는 것을 고려해 보십시오. -->
+    <!-- 10240 10MB 에서 102400 100MB 로 수정 -->
+    <Resources cacheMaxSize="102400"></Resources>
+```
+
+Timeouts
+- Start (in seconds): 450
+- Start (in seconds): 150
+
+```
+450
+```
+
+```
+150
+```
+
+Debug 실행
+
+주소
+
+```
+http://localhost:8080/test-com/
+```
+
+일반 일반회원(USER) 아이디
+
+```
+USER
+```
+
+일반 일반회원(USER) 패스워드
+
+공통12
+
+```
+rhdxhd12
+```
