@@ -171,6 +171,10 @@ C:\EGOVFRAME\eGovFrameDev-4.1.0-64bit\workspace\god2023\god.test-com-all\script\
 C:\EGOVFRAME\eGovCI-4.0.0_64bit\bin\apache-tomcat-8.5.73-jenkins
 ```
 
+#### god.test-com 톰캣
+
+공통컴포넌트 게시판 설치
+
 god.test-com 톰캣 추가
 
 캐시의 최대 크기를 증가
@@ -217,4 +221,16 @@ USER
 
 ```
 rhdxhd12
+```
+
+#### god.test-com-all 톰캣
+
+공통컴포넌트 전체 설치
+
+http://localhost:8080/egovframework-all-in-one
+
+44초
+
+```
+정보: Server startup in 44174 ms
 ```
