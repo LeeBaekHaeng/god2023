@@ -7,10 +7,9 @@ import javax.annotation.Resource;
 
 import org.egovframe.rte.fdl.property.EgovPropertyService;
 import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import egovframework.com.cmm.ComDefaultVO;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * EgovComAbstractController.java 클래스
@@ -28,14 +27,17 @@ import egovframework.com.cmm.ComDefaultVO;
  *   2022. 5. 4.   이백행        최초 생성
  *      </pre>
  */
+@Slf4j
 public abstract class EgovComAbstractController {
 
-	protected Logger egovLogger = LoggerFactory.getLogger(EgovComAbstractController.class);
-
 	@Resource(name = "propertiesService")
-	private EgovPropertyService egovPropertyService;
+	protected EgovPropertyService egovPropertyService;
 
-	public PaginationInfo builderPaginationInfo(ComDefaultVO comDefaultVO) {
+	protected PaginationInfo builderPaginationInfo(ComDefaultVO comDefaultVO) {
+		if (log.isDebugEnabled()) {
+			log.debug("comDefaultVO={}", comDefaultVO);
+		}
+
 		if (comDefaultVO.getPageUnit() == 10) {
 			comDefaultVO.setPageUnit(egovPropertyService.getInt("pageUnit"));
 		}
